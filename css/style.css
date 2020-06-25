@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/black-screen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 950px;
+    background-color: white;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    min-height: 350px;
+    padding: 80px 80px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.left, .right{
+    width: 50%;
+}
+
+.left img{
+    width: 250px;
+    height: 300px;
+}
+
+.right h1{
+    color: blue;
+    font-size: 45px;
+}
+.right h2{
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.right ul{
+    font-size: 20px;
+    margin-top: 14px;
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 39px;
+}
+
+.right a{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    
+}
+
+/* QUESTION HTML PAGE's CSS */
+
+.box{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    min-height: 350px;
+    width: 640px;
+    padding: 50px;
+}
+
+.first{
+    border-bottom: 1px solid black;
+    color: #464646;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.header{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score, .timer{
+    border: 1px solid grey;
+    border-radius: 100px;
+    padding: 10px 16px;
+    color: black;
+}
+
+.qstn{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+.mcqs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 0;
+    grid-gap: 15px;
+}
+.mcqs span{
+    background-color: #ccc;
+    border-radius: 10px;
+    color: #444;
+    border: 1px solid #444;
+    padding: 10px 15px;
+}
+.last{
+    display: flex;
+    justify-content: space-between;
+}
+.last button{
+    background: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 15px;
+    outline: none;
+    font-size: 16px;
+}
+
+.result{
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 150px 50px;
+    font-size: 20px;
+    font-family: monospace;
+}
+.result *:nth-child(odd){
+    text-align: right;
+    margin-bottom: 10px;
+}
+.result *:nth-child(even){
+    margin-left: 8px;
+}
+.btn{
+    border-top: 1px solid #444;
+    padding-top: 30px;
+    text-align: center;
+}
+.btn a{
+    background-color: blue;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.mcqs span.correct{
+    background-color: green;
+    color: white;
+}
+.mcqs span.incorrect{
+    background-color: red;
+    color: white;
+}
+/* QUESTION HTML PAGE's CSS End */ 
+
+@media(max-width: 768px){
+    .left{
+        display: none;
+    }
+    .container, .box{
+        width: 425px;
+    }
+    .right{
+        width: 100%;
+    }
+    .mcqs{
+        grid-template-columns: 1fr;
+    }
+}
